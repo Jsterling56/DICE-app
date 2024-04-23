@@ -1,29 +1,32 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+body {
+  background-color: #333;
+  color: #fff;
+}
 
-  /* .button-container {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    
-  } */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .card-container {
     display: flex;
-    flex-direction: wrap;
+    flex-direction: row;
     gap: 20px; /* Add space between cards */
     justify-content: center;
   }
+
   .card {
-    border: 1px solid #ccc; /* Add border to each card */
-    padding: 10px; /* Add padding for spacing inside the card */
-    flex: 1 1 200px;
-    margin: 5px;
-    max-width: 300px;
+    flex: 1 1 calc(33.33% - 20px); /* Original flex properties */
+    margin: 10px; /* Original margin */
+    max-width: 300px; /* Original max-width */
+    border: 1px solid #ccc; /* Original border */
+    padding: 20px; /* Original padding */
+    box-sizing: border-box;
   }
 
   .header-image {
@@ -36,11 +39,12 @@
   }
   
   button {
-    padding: 5px 20px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom:20px;
+    margin-bottom:10px;
     font-family: Arial, sans-serif;
+    border-radius: 8px;
   }
   
   .output-container {
@@ -58,4 +62,20 @@
 
   .output-container .output {
     font-family: Arial, sans-serif;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      max-width: calc(50%-20px);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .card {
+      max-width: calc(100% - 20px);
+    }
   }
