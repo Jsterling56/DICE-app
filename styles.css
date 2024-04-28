@@ -1,81 +1,87 @@
 body {
   background-color: #333;
+  /* Dark grey color */
   color: #fff;
+  /* Text color */
 }
 
-
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack cards in a single column */
+  gap: 20px;
+  /* Add space between cards */
+  align-items: center;
+  /* Center cards horizontally */
+}
+
+.card {
+  max-width: 300px;
+  /* Original max-width */
+  border: 1px solid #ccc;
+  /* Original border */
+  padding: 20px;
+  /* Original padding */
+  margin: 10px;
+  /* Original margin */
+}
+
+.header-image {
+  width: 100%;
+  /* Adjust the width as needed */
+  max-width: 400px;
+  height: auto;
+  /* Maintain aspect ratio */
+  display: block;
+  /* Ensure the image is displayed as a block element */
+  margin: 0 auto 20px;
+  /* Add some space below the image */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+.output-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.output {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  margin-right: 10px;
+}
+
+.history h3 {
+  display: inline; /* or display: inline-block; */
+  font-size: 18px; /* Example font size */
+  font-weight: bold; /* Example font weight */
+  color: #ccc; /* Example color */
+  /* Add any other styles you want to apply */
+}
+
+.history-number {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
   .card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; /* Add space between cards */
-    justify-content: center;
+    align-items: center;
   }
-
-  .card {
-    flex: 1 1 calc(33.33% - 20px); /* Original flex properties */
-    margin: 10px; /* Original margin */
-    max-width: 300px; /* Original max-width */
-    border: 1px solid #ccc; /* Original border */
-    padding: 20px; /* Original padding */
-    box-sizing: border-box;
-  }
-
-  .header-image {
-    width: 100%; /* Adjust the width as needed */
-    max-width: 400px;
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is displayed as a block element */
-    margin: 0 auto 10px; /* Add some space below the image */
-    padding-top: 100px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom:10px;
-    font-family: Arial, sans-serif;
-    border-radius: 8px;
-  }
-  
-  .output-container {
-    align-self:flex-start;
-    margin-left: auto;
-    /* border: 1px solid #ccc; */
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-
-  .output {
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-  }
-
-  .output-container .output {
-    font-family: Arial, sans-serif;
-  }
-
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .card {
-      max-width: calc(50%-20px);
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .card {
-      max-width: calc(100% - 20px);
-    }
-  }
+}
